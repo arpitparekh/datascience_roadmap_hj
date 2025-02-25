@@ -39,7 +39,7 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2)
 print(y_test)
 
 model = LinearRegression()
-model.fit(x_train.reshape(-1,1), y_train)
+model.fit(x_train.reshape(-1,1), y_train)  # model is already trained
 y_pred = model.predict(x.reshape(-1,1))
 
 mse = mean_squared_error(y,y_pred)
@@ -51,3 +51,8 @@ print(rmse)
 plt.scatter(x, y, color='blue')
 plt.plot(x, y_pred, color='red')
 plt.show()
+
+# take input from user
+age = int(input("Please Enter Age"))
+pred = model.predict([[age]])
+print("Predicted Salary is",pred)
