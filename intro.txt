@@ -1,0 +1,9 @@
+core python
+advance python
+seaborn
+datetime
+math
+
+numpy // distributions
+pandas // dataframe
+matplotlib
